@@ -1,2 +1,2 @@
 # clojure-spacemacs-on-android
-Setup instructions  for clojure and Spacemacs on Android 
+Setup instructions for Clojure and Spacemacs on Android 
