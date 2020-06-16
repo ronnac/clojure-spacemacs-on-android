@@ -30,7 +30,7 @@ Here is how I got Clojure and Spacemacs running on Android using termux-ubuntu. 
 
 ## Installation:
 
-￼### Install Termux from the Play Store (free)
+### Install Termux from the Play Store (free)
 
 This is straightforward. Termux has it's own package manager pkg, but if you type apt iso. pkg, that will also work.
 It comes with many packages. I have once installed a complete jupyter notebook stack with numpy, scipy etc. 
@@ -40,7 +40,7 @@ Termux can read and write the external SD card (you need to run termux-setup-sto
 Install a text editor (nano or vi with apt, or micro via curl cf. their website).
 Configure the termux extra key rows https://wiki.termux.com/wiki/Touch_Keyboard
 
-￼### Install termux-ubuntu
+### Install termux-ubuntu
 
 As I said above, java can't be installed directly in termux. To be completely honest, there is one package which installs java, but it's terribly slow. It's better to install the termux-ubuntu chroot, which is here: 
 https://github.com/Neo-Oli/termux-ubuntu
@@ -53,7 +53,7 @@ sed -i 's/disco/eoan/g' ubuntu.sh
 bash ubuntu.sh
 
 
-￼### Install Clojure in termux-ubuntu
+### Install Clojure in termux-ubuntu
 
 Start your termux-ubuntu session (you might want to create a shortcut for that later via termux-widget).
 
@@ -76,8 +76,7 @@ chmod +x ~/../bin/lein
 bash ~/../bin/lein
 
 
-￼### install spacemacs 
-
+### install spacemacs 
 Note: In termux-ubuntu the installation of packages doesn't work, error Bad address and other errors.
 
 Workaround:
