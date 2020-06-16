@@ -44,7 +44,11 @@ Configure the termux extra key rows https://wiki.termux.com/wiki/Touch_Keyboard
 
 As I said above, java can't be installed directly in termux. To be completely honest, there is one package which installs java, but it's terribly slow. It's better to install the termux-ubuntu chroot, which is here: 
 https://github.com/Neo-Oli/termux-ubuntu
-This creates a folder subsystem, and a startup script. The result is a terminal version of ubuntu. The available packages depend on your architecture. I was disappointed to learn that I have a 32 bit architecture, although the processor is 64 bit. 
+This creates a folder subsystem, and a startup script. The result is a terminal, GUI-less version of ubuntu. The available packages depend on your architecture. I was disappointed to learn that I have a 32 bit architecture, although the processor is 64 bit.
+
+Note: the termux-ubuntu installation script currently points to an Ubuntu version that is no longer provided. We find and replace it with the most recent one (eoan).
+
+Execute the following commands in the termux shell:
 
 mkdir -p ~/jails/ubuntu 
 cd ~/jails/ubuntu
@@ -55,9 +59,11 @@ bash ubuntu.sh
 
 ### Install Clojure in termux-ubuntu
 
-Start your termux-ubuntu session (you might want to create a shortcut for that later via termux-widget).
+Start your termux-ubuntu session by executing ./start-ubuntu.sh (you might want to create a shortcut for that later via termux-widget).
 
 #### Dependencies:
+in termux-ubuntu:
+
 apt update 
 apt-get install openjdk-8-jdk curl rlwrap git
 
@@ -74,7 +80,6 @@ curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
 mv lein ~/../bin/lein
 chmod +x ~/../bin/lein
 bash ~/../bin/lein
-
 
 ### install spacemacs 
 Note: In termux-ubuntu the installation of packages doesn't work, error Bad address and other errors.
